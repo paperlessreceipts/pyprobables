@@ -224,7 +224,8 @@ class BloomFilterOnDisk(BaseBloom):
         try:
             super(BloomFilterOnDisk,
                   self).__init__('reg-ondisk', est_elements,
-                                 false_positive_rate, hash_function)
+                                 false_positive_rate,
+                                 hash_function=hash_function)
         except InitializationError:
             pass
 
